@@ -25,20 +25,32 @@ function Books(book) {
     const book1AuthorElement = document.querySelector(".book1Author");
     const book1PagesElement = document.querySelector(".book1Pages");
     const book1CompletionElement = document.querySelector(".book1Completion");
-    const btn = document.createElement("button");
-    btn.innerHTML = "Remove Book";
+    const btn1 = document.createElement("button");
+    const btn2 = document.createElement("button");
+    btn1.innerHTML = "Remove Book";
 
     book1TitleElement.textContent = `Book #1 TITLE: ${i.title}`;
     book1AuthorElement.textContent = `AUTHOR: ${i.author}`;
     book1PagesElement.textContent = `PAGES: ${i.pages}`;
     console.log(i.completed);
-    if (i.completed === "off") {
-      book1CompletionElement.textContent = "STATUS: NOT COMPLETED";
-    } else if (i.completed === "on") {
-      book1CompletionElement.textContent = "STATUS: COMPLETED";
+    if (i.completed === false) {
+      btn2.innerHTML = "STATUS: INCOMPLETE";
+      book1CompletionElement.appendChild(btn2);
+    } else if (i.completed === true) {
+      btn2.innerHTML = "STATUS: COMPLETE";
+      book1CompletionElement.appendChild(btn2);
     }
-    book1.appendChild(btn);
-    btn.addEventListener("click", () => {
+
+    book1.appendChild(btn1);
+    btn2.addEventListener("click", () => {
+      if (btn2.innerHTML === "STATUS: INCOMPLETE") {
+        btn2.innerHTML = "STATUS: COMPLETE";
+      } else if (btn2.innerHTML === "STATUS: COMPLETE") {
+        btn2.innerHTML = "STATUS: INCOMPLETE";
+      }
+    });
+
+    btn1.addEventListener("click", () => {
       i.title = "";
       i.author = "";
       i.pages = "";
@@ -47,7 +59,7 @@ function Books(book) {
       book1AuthorElement.textContent = "";
       book1PagesElement.textContent = "";
       book1CompletionElement.textContent = "";
-      btn.style.display = "none";
+      btn1.style.display = "none";
     });
   }
 }
@@ -66,7 +78,7 @@ addBookButton.addEventListener("click", function (e) {
     bookTitle.value,
     bookAuthor.value,
     bookPages.value,
-    bookCompletion.value
+    bookCompletion.checked
   );
 
   addBookToLibrary(book_1);
