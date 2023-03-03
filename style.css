@@ -85,8 +85,12 @@ body {
 }
 
 #newBook {
+  display: flex;
+  align-self: center;
+  justify-content: center;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
+  min-width: 20vh;
   background-color: lightgreen;
   padding: 1vh;
   font-weight: bold;
@@ -94,4 +98,16 @@ body {
 
 #newBookForm {
   display: none;
+}
+
+.book1Result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.book1Completion {
+  display: flex;
+  justify-content: center;
 }

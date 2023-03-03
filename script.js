@@ -29,15 +29,23 @@ function Books(book) {
     const btn2 = document.createElement("button");
     btn1.innerHTML = "Remove Book";
 
-    book1TitleElement.textContent = `Book #1 TITLE: ${i.title}`;
+    book1TitleElement.textContent = `${i.title}`;
+    book1TitleElement.style.cssText =
+      "font-size: 24px; text-decoration: underlined; font-weight: bold; ";
     book1AuthorElement.textContent = `AUTHOR: ${i.author}`;
-    book1PagesElement.textContent = `PAGES: ${i.pages}`;
+    book1PagesElement.textContent = `# OF PAGES: ${i.pages}`;
+    btn1.style.cssText =
+      "display:flex; align-self: center; justify-content: center; border: none; background-color: red; width: 20vh; height: 3vh; font-weight: bold; font-size: 20px; border-radius: 25px; margin-top: 15vh; color: white;";
     console.log(i.completed);
     if (i.completed === false) {
       btn2.innerHTML = "STATUS: INCOMPLETE";
+      btn2.style.cssText =
+        " display:flex; border: none; border-radius: 15px; padding: 10px; background-color: grey; color: white;";
       book1CompletionElement.appendChild(btn2);
     } else if (i.completed === true) {
       btn2.innerHTML = "STATUS: COMPLETE";
+      btn2.style.cssText =
+        " display:flex; border: none; border-radius: 15px; padding: 10px; background-color: green; color: white;";
       book1CompletionElement.appendChild(btn2);
     }
 
@@ -45,8 +53,12 @@ function Books(book) {
     btn2.addEventListener("click", () => {
       if (btn2.innerHTML === "STATUS: INCOMPLETE") {
         btn2.innerHTML = "STATUS: COMPLETE";
+        btn2.style.cssText =
+          " display:flex; border: none; border-radius: 15px; padding: 10px; background-color: green; color: white;";
       } else if (btn2.innerHTML === "STATUS: COMPLETE") {
         btn2.innerHTML = "STATUS: INCOMPLETE";
+        btn2.style.cssText =
+          " display:flex; border: none; border-radius: 15px; padding: 10px; background-color: grey; color: white;";
       }
     });
 
