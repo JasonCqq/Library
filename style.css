@@ -58,6 +58,32 @@ body {
   text-align: center;
 }
 
+#newBookForm > * {
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+#bookTitle,
+#bookAuthor,
+#bookPages {
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 25px;
+  padding: 3% 10%;
+}
+
+#bookCompletion {
+  padding-top: 3%;
+}
+
+#addBook {
+  border: none;
+  border-radius: 25px;
+  background-color: lightgreen;
+  padding: 3%;
+  margin-top: 5%;
+}
+
 #newBook {
   border: none;
   border-radius: 25px;
