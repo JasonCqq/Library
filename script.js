@@ -1,3 +1,5 @@
+const allBooks = document.querySelectorAll(".book");
+const book2 = document.querySelector(".book2");
 const book1 = document.querySelector(".book1");
 
 const newBookButton = document.getElementById("newBook");
@@ -21,6 +23,8 @@ let myLibrary = [];
 
 function Books(book) {
   for (const i of myLibrary) {
+    console.log(myLibrary);
+    console.log(i);
     const book1TitleElement = document.querySelector(".book1Title");
     const book1AuthorElement = document.querySelector(".book1Author");
     const book1PagesElement = document.querySelector(".book1Pages");
@@ -96,10 +100,10 @@ addBookButton.addEventListener("click", function (e) {
   addBookToLibrary(book_1);
   Books(book_1);
 
-  addBookButton.style.display = "none";
+  //   addBookButton.style.display = "none";
   newBookForm.style.display = "none";
-
-  //   book2.appendChild(newBookForm);
+  book2.appendChild(newBookButton);
+  newBookButton.style.display = "block";
 
   e.preventDefault();
 });
