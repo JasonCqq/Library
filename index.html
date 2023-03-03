@@ -22,40 +22,61 @@
         </nav>
       </div>
 
-      <button id="newBook">NEW BOOK</button>
-      <form id="newBookForm">
-        <label for="title">Book Title:</label>
-        <input
-          id="bookTitle"
-          name="title"
-          type="text"
-          placeholder="Title..."
-        /><br />
-        <label for="author">Book Author:</label>
-        <input
-          id="bookAuthor"
-          name="author"
-          type="text"
-          placeholder="Author..."
-        /><br />
-        <label for="pages">Pages:</label>
-        <input
-          id="bookPages"
-          name="pages"
-          type="number"
-          placeholder="# of Pages"
-        /><br />
+      <div class="mainContent">
+        <div class="welcomeMessage">
+          <h1
+            style="font-weight: lighter; text-align: center; padding-top: 0.5vh"
+          >
+            Welcome to urLibrary, get started below!
+          </h1>
+        </div>
 
-        <label for="bookCompletion">Completed</label>
-        <input
-          type="checkbox"
-          id="bookCompletion"
-          name="bookCompletion"
-          value="Completion"
-        /><br />
+        <div class="libraryWrapper">
+          <div class="book1 book">
+            <button id="newBook">NEW BOOK</button>
+            <form id="newBookForm">
+              <label for="title">Book Title</label><br />
+              <input
+                id="bookTitle"
+                name="title"
+                type="text"
+                placeholder="Title..."
+              /><br />
+              <label for="author">Book Author</label><br />
+              <input
+                id="bookAuthor"
+                name="author"
+                type="text"
+                placeholder="Author..."
+              /><br />
+              <label for="pages">Pages</label><br />
+              <input
+                id="bookPages"
+                name="pages"
+                type="number"
+                placeholder="# of Pages"
+              /><br />
 
-        <button id="addBook" type="submit">Add Book</button>
-      </form>
+              <label for="bookCompletion">Completed</label>
+              <input
+                type="checkbox"
+                id="bookCompletion"
+                name="bookCompletion"
+              /><br />
+
+              <button id="addBook" type="submit">Add Book</button>
+            </form>
+          </div>
+
+          <div class="book2 book"></div>
+          <div class="book3 book"></div>
+          <div class="book4 book"></div>
+          <div class="book5 book"></div>
+          <div class="book6 book"></div>
+          <div class="book7 book"></div>
+          <div class="book8 book"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
