@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.navigationBar {
+  display: fixed;
+  box-shadow: 5px 1px 2px black;
+}
+
+.navigationBar ul {
+  display: flex;
+  list-style: none;
+  gap: 10vh;
+  align-items: center;
+  letter-spacing: 1px;
+  margin-right: 3vh;
+}
+
+.navigationBar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: 1vh;
+}
+
+#newBookForm {
+  display: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navigationBar">
+        <nav>
+          <ul>
+            <li class="logo">urLibrary</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>FAQ</li>
+          </ul>
+        </nav>
+      </div>
+
+      <button id="newBook">NEW BOOK</button>
+      <form id="newBookForm">
+        <label for="title">Book Title:</label>
+        <input
+          id="bookTitle"
+          name="title"
+          type="text"
+          placeholder="Title..."
+        /><br />
+        <label for="author">Book Author:</label>
+        <input
+          id="bookAuthor"
+          name="author"
+          type="text"
+          placeholder="Author..."
+        /><br />
+        <label for="pages">Pages:</label>
+        <input
+          id="bookPages"
+          name="pages"
+          type="number"
+          placeholder="# of Pages"
+        /><br />
+
+        <label for="bookCompletion">Completed</label>
+        <input
+          type="checkbox"
+          id="bookCompletion"
+          name="bookCompletion"
+          value="Completion"
+        /><br />
+
+        <button id="addBook" type="submit">Add Book</button>
+      </form>
+    </div>
+  </body>
+</html>
