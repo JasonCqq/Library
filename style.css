@@ -36,7 +36,7 @@ body {
   margin-left: 1vh;
 }
 
-.libraryWrapper {
+#libraryWrapper {
   display: grid;
   border: 2px solid black;
   border-radius: 25px;
@@ -46,16 +46,20 @@ body {
   grid-template-rows: repeat(2, 1fr);
 }
 
-.libraryWrapper > * {
+#libraryWrapper > * {
   border: 1px dotted black;
   border-radius: 25px;
 }
 
-.libraryWrapper .book {
+.book {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+  padding: 3% 10%;
 }
 
 #newBookForm > * {
@@ -90,7 +94,6 @@ body {
   justify-content: center;
   border: none;
   border-radius: 10px;
-  min-width: 20vh;
   background-color: lightgreen;
   padding: 1vh;
   font-weight: bold;
@@ -98,16 +101,4 @@ body {
 
 #newBookForm {
   display: none;
-}
-
-.book1Result {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 10px;
-}
-
-.book1Completion {
-  display: flex;
-  justify-content: center;
 }
